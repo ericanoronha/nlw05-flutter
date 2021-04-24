@@ -1,16 +1,8 @@
-# devquiz
+# DevQuiz
 
-A new Flutter project.
+Next Level Week #05 flutter project :rocket:
 
-## Getting Started
+This project is a quiz app on Flutter questions. Simple like that yet very challenging as it is my first "complete" Flutter app.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Next Level Week is an online event powered by [Rocketseat](https://rocketseat.com.br/)
