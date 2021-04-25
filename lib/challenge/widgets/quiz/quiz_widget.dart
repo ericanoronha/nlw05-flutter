@@ -13,9 +13,19 @@ class QuizWidget extends StatelessWidget {
           Text(title, style: AppTextStyles.heading),
           SizedBox(height: 24),
           AnswerWidget(
+              isRight: false,
+              title: "Kit de desenvolvimento de interface de usuário"),
+          AnswerWidget(
               isRight: true,
               title:
-                  "Possibilita a criação de aplicativos compliados nativamente")
+                  "Possibilita a criação de aplicativos compilados nativamente"),
+          AnswerWidget(
+              isRight: false,
+              title: "Acho que é uma marca de café do Himalaia"),
+          AnswerWidget(
+              isRight: false,
+              title:
+                  "Possibilita a criação de desktops que são muito incríveis"),
         ],
       ),
     );
