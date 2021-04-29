@@ -1,3 +1,4 @@
+import 'package:DevQuiz/challenge/challenge_page.dart';
 import 'package:DevQuiz/challenge/widgets/quiz/quiz_widget.dart';
 import 'package:DevQuiz/core/app_colors.dart';
 import 'package:DevQuiz/home/home_controller.dart';
@@ -42,18 +43,10 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    LevelButtonWidget(
-                      label: "Fácil",
-                    ),
-                    LevelButtonWidget(
-                      label: "Médio",
-                    ),
-                    LevelButtonWidget(
-                      label: "Difícil",
-                    ),
-                    LevelButtonWidget(
-                      label: "Perito",
-                    ),
+                    LevelButtonWidget(label: "Fácil"),
+                    LevelButtonWidget(label: "Médio"),
+                    LevelButtonWidget(label: "Difícil"),
+                    LevelButtonWidget(label: "Perito"),
                   ],
                 ),
                 SizedBox(height: 20),
@@ -69,6 +62,15 @@ class _HomePageState extends State<HomePage> {
                                   e.questionAnswered / e.questions.length,
                               completed:
                                   "${e.questionAnswered}/${e.questions.length}",
+                              onTap: () {
+                                //stack navigation
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ChallengePage(
+                                              questions: e.questions,
+                                            )));
+                              },
                             ))
                         .toList(),
                   ),
