@@ -1,10 +1,16 @@
+import 'package:flutter/material.dart';
+
 import 'package:DevQuiz/core/app_colors.dart';
 import 'package:DevQuiz/core/app_text_styles.dart';
-import 'package:flutter/material.dart';
 import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 
 class ScoreCardWidget extends StatelessWidget {
-  const ScoreCardWidget({Key? key}) : super(key: key);
+  final double percentage;
+
+  const ScoreCardWidget({
+    Key? key,
+    required this.percentage,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class ScoreCardWidget extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(flex: 1, child: ChartWidget()),
+              Expanded(flex: 1, child: ChartWidget(percentage: percentage)),
               Expanded(
                 flex: 3,
                 child: Padding(
